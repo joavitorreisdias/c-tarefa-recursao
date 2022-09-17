@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cstdlib>
+#include <iomanip>
+using namespace std;
+
+int potenciacao(int x, int n);
+int main(){
+int x,n,resultado;
+    cout << "digite um numero n" << endl;
+    cin >> n;
+    cout << "digite o número pelo qual ele é elevado" << endl;
+    cin >> x;
+    resultado = potenciacao(x,n);
+    cout << "o resultado da potenciacao:" << resultado << endl;
+return 0;
+}
+int potenciacao(int x, int n){
+    if( n == 1 || x == 1){
+        return n;
+    }
+    if(x <= 0){
+        return 1;
+    }
+    else{
+        return x * potenciacao(x-1,n);
+    }
+
+}
